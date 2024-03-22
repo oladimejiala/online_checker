@@ -1,0 +1,50 @@
+/* Set the default font size and line height */
+html {
+	box-sizing: border-box;
+}
+
+*,*:before, *:after { 
+	box-sizing: inherit;
+}
+
+
+.content-wrap {
+	max-width: 1400px;
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+	/* height: auto; */
+	border:thin;
+  background-color:#a2b9e6;
+	font-size: 15px;
+}
+
+p {
+	font-display: auto;
+	font-style: oblique;
+	font-size: 25px;
+}
+
+.form-input{
+	width: 75%;
+	padding: 20px;
+	margin: 200px;
+	display: inline-flex;
+	border-color: inherit;
+}
+
+.middle-section{
+	align-content: center;
+	display: inline-block;
+}
+
+button{
+	height: 50px;
+	width: 100px;
+	background-color: lightskyblue;
+	border-color: inherit;
+	border-radius: 9%;
+	position: sticky;
+	align-self: center;
+	margin:0 200px;
+}
