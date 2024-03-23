@@ -1,0 +1,5 @@
+.columns{
+	-webkit-column-count: 6; /* fo chrome, opera, safari */
+	-moz-column-count: 6;
+	column-count: 6;
+}
