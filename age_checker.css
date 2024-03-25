@@ -35,14 +35,8 @@ body{
 /* End of logo , Title and search-bar*/
 
 
-/*h1 {
-	display: flex;
-	flex-direction: row;
-	margin: 10px;
-}
-*/
 .columns{
-	-webkit-column-count: 2; /* fo chrome, opera, safari */
+	-webkit-column-count: 2; /* makes it compatible with chrome, opera, safari */
 	-moz-column-count: 2;
 	column-count: 2;
 }
@@ -60,13 +54,14 @@ body{
 	display: inline-flex;
 }
 
-.nav-bar > a {
+.nav-bar a {
 	padding: 30px;
 	font-size: medium;
 	align-items: center;
 	text-decoration: none;
 	color: white;
 }
+
 
 
 /*input section*/
