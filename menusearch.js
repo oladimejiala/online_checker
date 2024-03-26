@@ -1,7 +1,7 @@
 // this section listens and search fr results on the menu list based on users queries
-const marketData = [
+const marketsData = [
     {
-       "state": "lagos",
+       state: "Lagos",
         markets: [
             { name: "Ikeja market", location: "Ikeja, Lagos", peculiarity: "Textiles and fabrics" },
             { name: "Balogun market", location: " Lagos Island", peculiarity: "Largest Market in Nigeria" },
@@ -11,7 +11,7 @@ const marketData = [
             { name: "Free Trade zone", location: "", peculiarity: "importation , buying and selling goods in U.S. Dollars, zero import/export tariff zone" },
             { name: "Iyana Ipaja market", location: "Iyana ipaja", peculiarity: "cheap clothings boh used and new" },
             { name: "Alaba international market", location: "Abule osun", peculiarity: "All electronics market, computers, mobile phones and accessories, musical instuments and accessories" },
-            { name: "computer village market", location: "Ikeja", peculiarity: "electronics, mobile phoens and computers sales, repairs and refurbishing" }
+            { name: "computer village market", location: "Ikeja", peculiarity: "electronics, mobile phones and computers sales, repairs and refurbishing" }
         ]
     },
 
@@ -24,8 +24,8 @@ const marketData = [
     ]
 },
 
-{
-    state: "Oyo state",
+    {
+        state: "Oyo",
         markets: [
             { name: "Bodija market", location: " Bodija Ibadan", peculiarity: "Largest foodstuff market in Ibadan" },
             { name: "Aleshinloye market", location: "Aleshinloye Ibadan", peculiarity: "Good quality clothing and textiles, bulk sales Kitchen Utensils/wares" },
@@ -39,38 +39,28 @@ const marketData = [
 ];
 
 
-// function that will generate a list of market for users
-
+  // Function to generate HTML for markets
 function generateMarketList() {
-    const entryValue = document.getElementById('barInput').value;
-    if (entryValue in marketData) {
-        const stateHeading = document.createElement("h2");
-        stateHeading.textContent = marketData.state;
-        // marketListDiv.appendChild(stateHeading);
-        document.getElementById('result').innerHTML = marketData.state, marketData.markets
+    var entryValue = document.getElementById("marketList").value;
+    var result = document.getElementById('result');
+    result.innerHTML = ""; // Clear previous results
+
+    marketsData.forEach(state => {
+        if (state.state.toLowerCase() == entryValue.toLowerCase()) {
+            state.markets.forEach(market => {
+                var marketInfo = document.createElement('ol');
+                marketInfo.textContent = `Name: ${market.name}, Location: ${market.location}, Peculiarity: ${market.peculiarity}`;
+                result.appendChild(marketInfo);
+            });
         }
-    console.log(entryValue.appendChild(stateHeading));  
-    stateHeading
-        
-};        
-// call the function to generte the market list
-generateMarketList()
+    });
+    if (!result.innerHTML) {
+            result.innerHTML = "Page not currently available! Please enter another destination in Nigeria";
+        }
+}
 
-
-
-// use of input search
-
-// const input = document.getElementById('barInput').value;
-
-// if (input in marketData) {
-//     document.getElementById('result').innerHTML = marketData.state, marketData.location, marketData.peculiarity
-// } else {
-//     document.getElementById('result').innerHTML = "Your querry cannot be found"
-// }
-
-
-// clear entry
-document.getElementById('barInput').addEventListener('input', function () {
+// Call the function to generate the market list
+document.getElementById('marketList').addEventListener('input', function () {
 	const input = this.value.trim(); // this will remove the reults
 	if (input === ''){
 		document.getElementById('result').innerHTML = '';
