@@ -24,6 +24,15 @@ body{
 	color: gray;
 }
 
+
+
+.header .toggle-lang{
+	height: 20px;	
+	width: 20px;
+	border-color: rgb(233, 153, 153);
+
+}
+
 .logo {
 	width: 70px;
 	height: 70px;
@@ -82,16 +91,17 @@ body{
 }
 
 .form-input input{
-	width: 75%;
+	width: 50%;
 	height: 50px;
 	padding: 15px;
 	margin-bottom: 0px;
-	margin-top: 200px;
-	margin-left: 100px;
-	margin-right: 0px;
+	margin-top: 100px;
+	margin-left: 320px;
+	margin-right: 320px;
 	border-radius: 7px;
-/*	display: flex;*/
-	align-items:stretch;
+	justify-content: center;
+	display: flex;
+	/* align-items:stretch; */
 /*	align-content: space-around;*/
 	border-color: inherit;
 }
@@ -116,7 +126,7 @@ body{
 
 .form-input .submit-button{
 	height: 50px;
-	display: inline-flex;
+	display: flex;
 	font-size: 16px;
 	width: 100px;
 	padding: 20px;
@@ -125,8 +135,9 @@ body{
 	border-color: inherit ;
 	align-items: center;
 	margin-bottom: 200px;
-	margin-top: 200px;
-	margin-left: 5px;
+	margin-top: 20px;
+	margin-left: 580px;
+	margin-right: 550px;
 	align-content: center;
 	justify-content: center;
 	cursor: pointer;
@@ -153,3 +164,5 @@ body{
 	display: flex;
 	justify-content: center;
 }
+
+

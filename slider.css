@@ -1,0 +1,38 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust maximum width of the slider */
+    margin: 0 auto; /* Center the slider horizontally */
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+    margin-top: 20px;
+}
+
+.slider img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
